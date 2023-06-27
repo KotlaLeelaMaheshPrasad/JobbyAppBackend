@@ -9,6 +9,8 @@ dotenv.config();
 
 const app = express();
 
+//origin changed
+
 app.use(cors({ origin: process.env.ORIGIN }));
 
 app.use(express.json());
