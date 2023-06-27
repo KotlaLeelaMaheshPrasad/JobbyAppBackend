@@ -35,6 +35,10 @@ const auth = (request, response, next) => {
     next();
 };
 
+app.get('/', async(request, response) => {
+    response.json("Welcome to the JobbyApp Backend");
+}) 
+
 app.get('/profile', auth,  async(request, response) => {
     const details = await user.find({username: request.username});
     //console.log(details);
