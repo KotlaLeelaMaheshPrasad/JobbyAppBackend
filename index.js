@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({ origin: 'https://kotlaleelamaheshprasad.github.io/jobbyapp/#' }));
+app.use(cors({ origin: process.env.ORIGIN }));
 
 app.use(express.json());
 
